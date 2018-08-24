@@ -1,4 +1,11 @@
-fetch('https://api.github.com/users/google/repos')
+fetch('https://api.githu.com/users/google/repos')
   .then(function (response) {
-    console.log(response);
+
+    response.json().then(function(json) {
+      console.log(json);
+    });
   })
+  .catch(function(error) {
+    console.log('Fetch error');
+    console.log(error);
+  });
